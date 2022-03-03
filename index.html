@@ -5,17 +5,21 @@
 <title>TESTE</title>
 </head>
 <body>
-  Testandooo
+  OTO
+  <div id="out"></div>
 
   <script type="text/javascript">
+      var arr = document.cookie.split(';'), cookies = {};
+    
+      for(var i=0; i < arr.length; i++){
+        var parts = arr[i].split('=');
+        if(parts.length !== 2) continue;
+        cookies[parts[0].trim()] = parts[1];
+      }
+    
+      console.dir(cookies)
 
-    var par = document.createElement("p");
-
-    var text = document.createTextNode(document.cookie);
-
-    par.appendChild(text);
-
-    document.body.appendChild(par);
-</script>
+      document.getElementById('out').textContent = cookies['XPUSERTOKEN'];
+  </script>
 </body>
 </html>
