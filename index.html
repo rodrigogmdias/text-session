@@ -23,5 +23,15 @@
       document.getElementById('out').textContent = document.domain;
       document.getElementById('cookie').textContent = document.cookie;
   </script>
+  
+  <iframe id="opIFrame" style='visibility: hidden;' src="https://www.xpi.com.br" onload="getCookieValue('session_state')" >
+  </iframe> 
+     <script>
+       function getCookieValue(cookieName) {
+          console.log("=====getCookieValue=======");
+          var cookies = document.cookie;
+          console.log("=====ALL cookies======="+cookies);
+       }
+    </script>
 </body>
 </html>
