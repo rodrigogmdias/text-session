@@ -5,9 +5,10 @@
 <title>TESTE</title>
 </head>
 <body>
-  COOKIE
+  IFRAME
   <div id="out"></div>
   <div id="cookie"></div>
+  <div id="iFrameCookie"></div>
 
   <script type="text/javascript">
       var arr = document.cookie.split(';'), cookies = {};
@@ -30,6 +31,7 @@
        function getCookieValue(cookieName) {
           console.log("=====getCookieValue=======");
           var cookies = document.cookie;
+          document.getElementById('iFrameCookie').textContent = document.cookie;
           console.log("=====ALL cookies======="+cookies);
        }
     </script>
